@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse String</title>
+    <style>
+        .box {
+
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        input {
+            padding: 12px 35px;
+            font-size: 25px;
+            font-weight: 500;
+            margin: 10px;
+            transition: all 0.4s;
+            color: black;
+            border: 2px solid rgb(202, 190, 190);
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .box label {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            font-size: 25px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>Reverse a String In RealTime</h1>
+        <label for="orginalstring">OriginalString</label>
+        <input type="text" id="orginalstring" onkeyup="OriginalString()">
+        <label for="reversestring">ReverseString</label>
+        <input type="text" id="reversestring">
+    </div>
+    <script>
+        function OriginalString() {
+            var str = document.getElementById('orginalstring').value;
+            var newString = "";
+            for (var i = str.length - 1; i >= 0; i--) {
+                newString = newString + str[i];
+            }
+            document.getElementById('reversestring').value = newString;
+
+        }
+    </script>
+
+</body>
+
+</html>
